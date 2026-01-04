@@ -17,8 +17,9 @@ const Header = () => {
       <header className="flex justify-between items-center p-4 px-4 lg:px20">
         <h1 data-aos="fade-down"
      data-aos-easing="linear"
-     data-aos-duration="1500" className="text-3xl md:text-4xl lg:text-5xl font-light m-0">
-            MCODE
+     data-aos-duration="1500" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold md:font-light leading-snug md:leading-tight m-0"
+>
+            EAVOX - 3D Interativo
         </h1>
         {/* DESKTOP NAVEGAÇÃO */}
             <nav data-aos="fade-down"
@@ -49,10 +50,10 @@ const Header = () => {
         {/* MOBILE NAVEGAÇÃO */}
         <div id='mobileMenu' className='hidden fixed top-16 right-0 left-0 bottom-0 p-5 md:hidden z-40 bg-black bg-opacity-70 backdrop-blur-sm md'>
             <nav className='flex flex-col gap-6 items-center'>
-            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#home">Home</a>
-            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#serviços">Serviços</a>
-            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#sobre">Sobre</a>
-            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#contato">Contato</a>
+            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#Sobre">Sobre</a>
+            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#Projetos">Projetos</a>
+            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#Tecnologias">Tecnologias</a>
+            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#Contato">Contato</a>
             </nav>
         </div>
 

@@ -33,23 +33,26 @@ const Hero = () => {
             className="border border-[#2a2a2a] py-2 sm:py-3 px-4 sm:px-5 rounded-full sm:text-base text-sm font-semibold tracking-wider transition-all duration-300 hover:bg-[#1a1a1a]"
             href=""
           >
-            Documentation <i className="bx bx-link-external"></i>
+            Tecnologias <i className="bx bx-link-external"></i>
           </a>
 
           <a
             className="border border-[#2a2a2a] py-2 sm:py-3 px-8 sm:px-10 rounded-full sm:text-base text-sm font-semibold tracking-wider transition-all duration-300 bg-gray-300 text-black hover:bg-[#1a1a1a] hover:text-white"
             href=""
           >
-            GetStarted <i className="bx bx-link-external"></i>
+            Ver Projetos <i className="bx bx-link-external"></i>
           </a>
         </div>
       </div>
 
       {/* 3D Robot */}
-      <Spline
+       {/* <Spline
         className="w-full h-[260px] mx-auto mb-10 sm:h-[340px] lg:mb-0 lg:w-[420px] lg:h-[420px] z-0"
         scene="https://prod.spline.design/xT2D5-PXRdX9r7gu/scene.splinecode"
-      />
+      /> */}
+
+      <Spline className="order-first w-[180px] h-[180px] mx-auto mb-8 sm:w-[260px] sm:h-[260px] lg:order-none lg:mb-0 lg:w-[420px] lg:h-[420px] z-0" scene="https://prod.spline.design/xT2D5-PXRdX9r7gu/scene.splinecode" />
+
 
     </main>
   )
