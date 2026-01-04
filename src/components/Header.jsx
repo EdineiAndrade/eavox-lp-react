@@ -16,14 +16,14 @@ const Header = () => {
     <div>
       <header className="flex justify-between items-center p-4 px-4 lg:px20">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-light m-0 ">
-            EAVOX
+            MCODE
         </h1>
         {/* DESKTOP NAVEGAÇÃO */}
         <nav className="hidden md:flex items-center gap-12">
-            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#home">Home</a>
-            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#serviços">Serviços</a>
-            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#sobre">Sobre</a>
-            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#contato">Contato</a>
+            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#Sobre">Sobre</a>
+            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#Projetos">Projetos</a>
+            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#Tecnologias">Tecnologias</a>
+            <a className="text-base tracking-wider transition-colors hover:text-gray-300 z-50" href="#Contato">Contato</a>
         </nav>
 
         <button className="hidden md:block bg-[#a7a7a7] text-black py-3 px-8 rounded-full border-none font-medium transition-all duration-500 hover:bg-white cursor-pointer z-50"> 
