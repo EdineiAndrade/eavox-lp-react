@@ -1,29 +1,54 @@
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
+import Header from "./components/Header.jsx";
+import Hero from "./components/Hero.jsx";
+
+import Sobre from "./pages/Sobre.jsx";
+import Projetos from "./pages/Projetos.jsx";
+import Tecnologias from "./pages/Tecnologias.jsx";
+import Contato from "./pages/Contato.jsx";
 
 export default function App() {
-
   useEffect(() => {
-    AOS.init({ 
+    AOS.init({
       duration: 1500,
-      once: true
-    })
-  })
+      once: true,
+    });
+  }, []);
 
- return ( 
-  <main> 
-    {/* Gradient Imagem*/} 
-    <img className="absolute top-0 rigth-0 opacity-60 -z-1" src="/gradient.png" alt="Gradient-img" /> 
-    {/* Blur Effect*/} 
-    <div className="h-0 w-[40rem] absolute top-[20%] right-[-5%] shadow-[0_0_900px_20px_#e99b63] -rotate-[30deg] -z-10"> 
-      </div> 
-      <Header /> 
-      <Hero />
-  </main> 
-)
+  return (
+    <BrowserRouter>
+      <div className="relative min-h-screen">
+        <Header />
 
+        <Routes>
+          {/* Página inicial */}
+          <Route
+            path="/"
+            element={
+              <main className="relative">
+                <Hero />
+                {/* Gradiente e blur */}
+                <img
+                  className="absolute top-0 right-0 opacity-60 -z-1"
+                  src="/gradient.png"
+                  alt="Gradient-img"
+                />
+                <div className="h-0 w-[40rem] absolute top-[20%] right-[-5%] shadow-[0_0_900px_20px_#e99b63] -rotate-[30deg] -z-10"></div>
+              </main>
+            }
+          />
+
+          {/* Outras páginas */}
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/projetos" element={<Projetos />} />
+          <Route path="/tecnologias" element={<Tecnologias />} />
+          <Route path="/contato" element={<Contato />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
 }
