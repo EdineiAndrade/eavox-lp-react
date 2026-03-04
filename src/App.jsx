@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
+import N8nChat from "./components/N8nChat.jsx";
 
 import Sobre from "./pages/Sobre.jsx";
 import Projetos from "./pages/Projetos.jsx";
@@ -38,6 +39,7 @@ export default function App() {
                   alt="Gradient-img"
                 />
                 <div className="h-0 w-[40rem] absolute top-[20%] right-[-5%] shadow-[0_0_900px_20px_#e99b63] -rotate-[30deg] -z-10"></div>
+                <N8nChat />
               </main>
             }
           />

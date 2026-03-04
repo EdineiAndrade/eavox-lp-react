@@ -1,0 +1,163 @@
+/* =========================================================
+EAVOX • OVERRIDE TOTAL DO TEMA N8N CHAT
+---------------------------------------------------------
+Objetivo:
+- remover azul/branco padrão
+- aplicar dark + laranja (igual ao hero do site)
+- garantir que pegue mesmo se as classes mudarem
+Manutenção:
+- altere apenas as variáveis em :root (cores da marca)
+========================================================= */
+
+:root {
+  --eavox-accent: #ff7a18;       /* laranja principal */
+  --eavox-accent2: #ff5e00;      /* laranja mais forte */
+  --eavox-bg: #07070a;           /* fundo base */
+  --eavox-surface: rgba(10,10,14,.86); /* glass */
+  --eavox-border: rgba(255,122,24,.22);
+  --eavox-text: rgba(246, 242, 242, 0.994);
+  --eavox-text2:rgba(17, 17, 17, 0.994);
+  --eavox-muted: rgba(48, 41, 41, 0.947);
+}
+
+/* =========================
+JANELA (container)
+========================= */
+.n8n-chat [class*="window"],
+.n8n-chat .chat-window {
+  background: var(--eavox-surface) !important;
+  border: 1px solid var(--eavox-border) !important;
+  border-radius: 18px !important;
+  backdrop-filter: blur(14px) !important;
+  box-shadow: 0 24px 60px rgba(0,0,0,.7) !important;
+  overflow: hidden !important;
+}
+
+/* =========================
+HEADER (remove azul)
+========================= */
+.n8n-chat [class*="header"],
+.n8n-chat .chat-header {
+  background:
+    radial-gradient(900px 220px at 15% 0%, rgba(255,122,24,.16), transparent 55%),
+    linear-gradient(180deg, rgba(10,10,12,.98), rgba(10,10,12,.80)) !important;
+  border-bottom: 1px solid rgba(255,122,24,.18) !important;
+  color: var(--eavox-text) !important;
+}
+
+.n8n-chat [class*="header"] * {
+  color: var(--eavox-text) !important;
+}
+
+/* =========================
+BODY (remove branco)
+========================= */
+.n8n-chat [class*="body"],
+.n8n-chat .chat-body {
+  background:
+    radial-gradient(850px 260px at 10% 0%, rgba(255,122,24,.08), transparent 60%),
+    radial-gradient(850px 260px at 90% 100%, rgba(255,122,24,.06), transparent 55%),
+    rgba(0,0,0,.45) !important;
+}
+
+/* =========================
+BOLHAS
+========================= */
+
+/* bolha do bot */
+.n8n-chat [class*="message"][class*="bot"] [class*="bubble"],
+.n8n-chat .message.bot .message-bubble {
+  background: rgba(255,255,255,.08) !important;
+  color: var(--eavox-text) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 14px !important;
+}
+
+/* bolha do usuário */
+.n8n-chat [class*="message"][class*="user"] [class*="bubble"],
+.n8n-chat .message.user .message-bubble {
+  background: linear-gradient(180deg, var(--eavox-accent), var(--eavox-accent2)) !important;
+  color: #0b0b0f !important;
+  border-radius: 14px !important;
+}
+
+/* =========================
+FOOTER / INPUT BAR (remove branco)
+========================= */
+.n8n-chat [class*="footer"],
+.n8n-chat [class*="composer"],
+.n8n-chat .chat-footer,
+.n8n-chat .chat-input {
+  background: rgba(10,10,12,.82) !important;
+  backdrop-filter: blur(12px) !important;
+  border-top: 1px solid rgba(255,122,24,.16) !important;
+}
+
+/* campo de texto */
+.n8n-chat textarea,
+.n8n-chat input {
+  background: rgba(0,0,0,.40) !important;
+  color: var(--eavox-text2) !important;
+
+  border: 1px solid rgba(255,122,24,.28) !important;
+  border-radius: 12px !important;
+
+  padding: 12px 12px !important;
+  outline: none !important;
+}
+
+/* placeholder */
+.n8n-chat textarea::placeholder,
+.n8n-chat input::placeholder {
+  color: var(--eavox-muted) !important;
+}
+
+/* foco */
+.n8n-chat textarea:focus,
+.n8n-chat input:focus {
+  border-color: rgba(255,122,24,.8) !important;
+  box-shadow: 0 0 0 4px rgba(255,122,24,.18) !important;
+}
+
+/* botão enviar */
+.n8n-chat button[type="submit"],
+.n8n-chat [class*="send"] {
+  background: linear-gradient(180deg, var(--eavox-accent), var(--eavox-accent2)) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 22px rgba(0,0,0,.5) !important;
+  transition: transform .18s ease, filter .18s ease !important;
+}
+
+.n8n-chat button[type="submit"]:hover,
+.n8n-chat [class*="send"]:hover {
+  transform: translateY(-1px) scale(1.03) !important;
+  filter: brightness(1.06) !important;
+}
+
+/* =========================
+BOTÃO FLUTUANTE (toggle/minimizar) - sempre laranja
+========================= */
+.n8n-chat .chat-toggle-button,
+.n8n-chat [class*="toggle"] {
+  background: linear-gradient(180deg, var(--eavox-accent), var(--eavox-accent2)) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  border-radius: 999px !important;
+
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.60),
+    0 0 0 2px rgba(255,122,24,.22) inset !important;
+
+  transition: transform .18s ease, filter .18s ease !important;
+}
+
+.n8n-chat .chat-toggle-button:hover {
+  transform: translateY(-2px) scale(1.05) !important;
+  filter: brightness(1.06) !important;
+}
+
+/* ícone branco */
+.n8n-chat .chat-toggle-button svg,
+.n8n-chat [class*="toggle"] svg {
+  color: #fff !important;
+}
